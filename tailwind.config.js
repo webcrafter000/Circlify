@@ -1,22 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: ["class"], // Enables dark mode via class
   content: [
-    './pages/**/*.{js,jsx}',
+    './pages/**/*.{js,jsx}', // Scans these folders for Tailwind classes
     './components/**/*.{js,jsx}',
     './app/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
   ],
-  prefix: "",
+  prefix: "", // Keeps default Tailwind class names
   theme: {
     container: {
-      center: true,
-      padding: "2rem",
+      center: true, // Centers the container
+      padding: "1rem", // Adjusted for better mobile responsiveness
       screens: {
-        "2xl": "1400px",
-        sm: "640px", // Small screens (mobile)
-        md: "768px", // Medium screens (tablets)
-        lg: "1024px", // Large screens (desktops)
+        "2xl": "1400px", // Extra large screens
+        xl: "1280px",    // Large desktops
+        lg: "1024px",    // Desktops
+        md: "768px",     // Tablets
+        sm: "640px",     // Mobile devices
       },
     },
     extend: {
@@ -27,7 +28,7 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#8230FF",
+          DEFAULT: "#8230FF", // Main brand color
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -56,9 +57,9 @@ module.exports = {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius)", // Large radius for consistent design
+        md: "calc(var(--radius) - 2px)", // Medium radius
+        sm: "calc(var(--radius) - 4px)", // Small radius
       },
       keyframes: {
         "accordion-down": {
@@ -71,10 +72,12 @@ module.exports = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.2s ease-out", // Smooth accordion opening
+        "accordion-up": "accordion-up 0.2s ease-out",     // Smooth accordion closing
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"), // Enables animations
+  ],
 }
