@@ -49,7 +49,7 @@ function GenerateAITemplate({setGenerateAIOutput}) {
                 <DialogTitle>Generate AI Template</DialogTitle>
                 <DialogDescription>
                     <div>
-                    <h2 className='mt-5'>What you want to write in document?</h2>
+                    <h2 className='mt-5'>What do you want to write in document?</h2>
                     <Input placeholder="Ex. Project Idea" 
                         onChange={(event)=>setUserInput(event?.target.value)}
                     />
